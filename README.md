@@ -43,7 +43,7 @@ Milena es una entrenadora de aves que puede entrenar a varias a la vez. Cuando M
 Se pide 
 * implementar a milena, 
 * realizar las modificaciones a los objetos ya resueltos para garantizar que un ave no puede volar una distancia mayor a la de su energia. 
-* Tener en cuenta que milena no puede movilizar sus aves si alguna de ellas no puede recorrer esa distancia
+* Tener en cuenta que milena no puede movilizar sus aves si alguna de ellas no puede recorrer esa distancia.
 
 Ejemplos: 
  Suponiendo que milena tiene a pepita y a pepon, con sus respectivas energias iniciales (100 y 30).

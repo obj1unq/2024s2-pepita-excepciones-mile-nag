@@ -1,0 +1,30 @@
+
+import pepita.*
+
+describe "Test 1" {
+	test "Pepita y Pepon pueden volar 4 kms. Por lo tanto Milena puede movilizarlas." {
+		milena.movilizar(4)
+		assert.equals(2, pepon.energia())  
+		assert.equals(86, pepita.energia()) 
+	}
+
+	test "Pepita puede volar 6 kms, pero Pepon no. Por lo tanto Milena no puede movilizarlas." {
+
+        assert.throwsException({milena.movilizar(6)})
+        // milena.movilizar(6) -->  wollok.lang.DomainException: Algún bicho no tiene energía para volar
+
+        // los valores iniciales de energía se mantienen
+		assert.equals(30, pepon.energia())  
+		assert.equals(100, pepita.energia()) 
+    }
+
+    test "Ni pepita ni pepon pueden volar 100 km"{
+
+        assert.throwsException({milena.movilizar(100)})
+        // milena.movilizar(6)  --> wollok.lang.DomainException: Algún bicho no tiene energía para volar
+		
+        assert.equals(30, pepon.energia())   
+		assert.equals(100, pepita.energia()) 
+    }
+}
+
